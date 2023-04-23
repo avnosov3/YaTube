@@ -57,10 +57,10 @@ class Post(models.Model):
         verbose_name_plural = 'Посты'
 
     OUT = (
-        'text={text:.15} '
-        'pub_date={pub_date} '
-        'author={author} '
-        'group={group} '
+        'text:"{text:.15}" '
+        'pub_date:"{pub_date}" '
+        'author:"{author}" '
+        'group:"{group}" '
     )
 
     def __str__(self):
@@ -99,6 +99,21 @@ class Comment(models.Model):
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
 
+    OUT = (
+        'text={text:.15} '
+        'post={post} '
+        'author={author} '
+        'created={created} '
+    )
+
+    def __str__(self):
+        return self.OUT.format(
+            post=self.post,
+            text=self.text,
+            author=self.author,
+            created=self.created
+        )
+
 
 class Follow(models.Model):
     user = models.ForeignKey(
@@ -127,3 +142,8 @@ class Follow(models.Model):
                 check=~models.Q(user=models.F("author")),
             ),
         ]
+
+    OUT = 'пользователь "{}" подписан на "{}"'
+
+    def __str__(self):
+        return self.OUT.format(self.user, self.author)
