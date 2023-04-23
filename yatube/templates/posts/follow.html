@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block title %} 
+  Последние подписки  @{{ user.username }} на авторов
+{% endblock %}
+
+{% block content %}
+  <div class="container py-5">
+    <h1>Подписки @{{ user.username }} на авторов</h1>
+    {% include 'posts/includes/switcher.html' with follow=True%}
+    {% for post in page_obj %}
+      {% include 'posts/includes/post.html' %}
+      {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    {% include 'includes/paginator.html' %}
+  </div>
+{% endblock %}
