@@ -1,7 +1,7 @@
 # [YaTube](https://budiroga.pythonanywhere.com/)
 [YaTube](https://budiroga.pythonanywhere.com/) - социальная сеть, в которой реализована возможность публикации и комментирования постов,
 подписки на авторов. В проекте использована пагинация и кеширование страниц. Написаны
-тесты для проверки реализованных функций сайта и подключен django-debug-toolbar. Дополнительно разработан REST [API](https://budiroga.pythonanywhere.com/api/v1/redoc/) для сервиса. [Документация API](https://budiroga.pythonanywhere.com/api/v1/redoc/)
+тесты для проверки реализованных функций сайта и подключен django-debug-toolbar. Дополнительно разработан REST [API](https://budiroga.pythonanywhere.com/api/v1/redoc/) для сервиса [(документация API)](https://budiroga.pythonanywhere.com/api/v1/redoc/).
 
 ## Техно-стек
 * python 3.7.9
