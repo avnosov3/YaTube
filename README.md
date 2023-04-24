@@ -12,6 +12,9 @@
 * django-debug-toolbar 3.2.4
 * pillow 8.3.1
 * sorl-thumbnail 12.7.0
+* postgres 13.0
+* gunicorn 20.0.4
+* nginx 1.21.3
 
 ## Запуск проекта
 1. Клонировать репозиторий
