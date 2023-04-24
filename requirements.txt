@@ -10,6 +10,7 @@ coreschema==0.0.4
 cryptography==40.0.2
 defusedxml==0.7.1
 Django==2.2.16
+django-debug-toolbar==3.2.4
 django-templated-mail==1.1.1
 djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.2
@@ -37,6 +38,7 @@ pytest==6.2.4
 pytest-django==4.4.0
 pytest-pythonpath==0.7.3
 python-dateutil==2.8.2
+python-dotenv==0.21.0
 python3-openid==3.2.0
 pytz==2023.3
 requests==2.26.0
