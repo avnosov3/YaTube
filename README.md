@@ -39,12 +39,7 @@ source venv/Scripts/activate (Windows)
 pip3 install -r requirements.txt
 pip install -r requirements.txt (Windows)
 ```
-5. Из папки yatube провести миграции
-```
-python3 manage.py migrate
-python manage.py migrate (Windows)
-```
-6. Создать файл .env в папке yatube, где находится файл **settings.py**
+5. Создать файл .env в папке yatube, в которой находится файл **settings.py**
 ```
 SECRET_KEY=<указать секретный ключ>
 DEBUG=True (если запуск в боевом режиме, то необходимо удалить пермеенную)
@@ -56,10 +51,24 @@ POSTGRES_PASSWORD=<Указать пароль>
 DB_HOST=127.0.0.1
 DB_PORT=<Указать порт для подключения к базе>
 ``` 
-7. Запустить проека
+6. Перейти на уровень выше и провести миграции
+```
+cd ..
+```
+```
+python3 manage.py migrate
+python manage.py migrate (Windows)
+```
+7. Создать супер пользователя
+```
+python3 manage.py createsuperuser
+python manage.py createsuperuser (Windows)
+```
+8. Запустить проект
 ```
 python3 manage.py runserver
 python manage.py runserver (Windows)
 ```
+
 ## Автор
 [Артём Носов](https://github.com/avnosov3)
