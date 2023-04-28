@@ -44,7 +44,19 @@ pip install -r requirements.txt (Windows)
 python3 manage.py migrate
 python manage.py migrate (Windows)
 ```
-6. Запустить проект
+6. Создать файл .env в папке yatube, где находится файл **settings.py**
+```
+SECRET_KEY=<указать секретный ключ>
+DEBUG=True (если запуск в боевом режиме, то необходимо удалить пермеенную)
+
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=yatube
+POSTGRES_USER=<Указать имя пользователя>
+POSTGRES_PASSWORD=<Указать пароль>
+DB_HOST=127.0.0.1
+DB_PORT=<Указать порт для подключения к базе>
+``` 
+7. Запустить проека
 ```
 python3 manage.py runserver
 python manage.py runserver (Windows)
