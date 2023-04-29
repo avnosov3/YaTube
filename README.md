@@ -42,13 +42,13 @@ pip install -r requirements.txt (Windows)
 5. Создать файл .env в папке yatube, в которой находится файл **settings.py**
 ```
 SECRET_KEY=<указать секретный ключ>
-DEBUG=True (если запуск в боевом режиме, то необходимо удалить пермеенную)
+DEBUG=True (если запуск в боевом режиме, то необходимо удалить переменную)
 
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=yatube
+DB_ENGINE=<Указать движок БД>
+DB_NAME=<Указать название БД>
 POSTGRES_USER=<Указать имя пользователя>
 POSTGRES_PASSWORD=<Указать пароль>
-DB_HOST=127.0.0.1
+DB_HOST=<Указать хост>
 DB_PORT=<Указать порт для подключения к базе>
 ``` 
 6. Перейти на уровень выше и провести миграции
